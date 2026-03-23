@@ -1,0 +1,91 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Movie Booking Application",
+    tagline: "End-to-end ticket booking with real-time seat selection",
+    description:
+      "Full stack movie ticket booking system that allows users to search movies, select theatres, choose seats and complete booking workflows. Includes theatre owner management, show scheduling and seat selection flow.",
+    longDescription:
+      "A full-featured movie booking platform built with Spring Boot on the backend and vanilla JavaScript on the frontend. Users can browse currently showing movies, select a theatre and showtime, interactively pick seats from a visual grid, and confirm their booking. Theatre owners have a dedicated management panel for scheduling shows and managing seat availability. The system uses H2 in-memory database for rapid development and exposes a clean REST API layer.",
+    technologies: ["Spring Boot", "REST APIs", "JavaScript", "HTML", "CSS", "H2 Database"],
+    category: "Full Stack",
+    status: "Completed",
+    live: false,
+    liveUrl: null,
+    githubUrl: "https://github.com/prejinpr",
+    preview: null,
+    screenshots: [],
+    architecture: [
+      { layer: "Frontend", detail: "Vanilla JS + HTML — interactive seat map, booking flow" },
+      { layer: "REST API", detail: "Spring Boot controllers exposing /movies, /shows, /bookings endpoints" },
+      { layer: "Service Layer", detail: "Business logic for seat locking, availability checks, booking confirmation" },
+      { layer: "Database", detail: "H2 in-memory — Movies, Shows, Seats, Bookings tables" },
+    ],
+    highlights: [
+      "Interactive visual seat-selection grid with live availability states",
+      "Role-based flows: viewer booking vs theatre-owner show management",
+      "RESTful API with JSON request/response contract",
+      "Seat conflict prevention with atomic booking logic",
+    ],
+    year: "2024",
+  },
+  {
+    id: 2,
+    title: "Blog Application",
+    tagline: "Structured content publishing with REST backend",
+    description:
+      "Content publishing web application with structured REST backend. Supports create, update and delete operations for blog posts using JSON based communication.",
+    longDescription:
+      "A REST-based blog platform built with Spring Boot following the MVC pattern. Provides full CRUD operations for blog posts via a clean JSON API. The application demonstrates structured layering — controllers handle HTTP routing, service classes contain business rules, and repository interfaces manage persistence. Designed to be consumed by any frontend client.",
+    technologies: ["Spring Boot", "MVC", "REST", "JSON", "Java"],
+    category: "Backend",
+    status: "Completed",
+    live: false,
+    liveUrl: null,
+    githubUrl: "https://github.com/prejinpr",
+    preview: null,
+    screenshots: [],
+    architecture: [
+      { layer: "Controller", detail: "REST endpoints for CRUD operations on posts" },
+      { layer: "Service", detail: "Business validation, data transformation logic" },
+      { layer: "Repository", detail: "JPA-based data access layer" },
+      { layer: "Model", detail: "Post entity with title, content, author, timestamp fields" },
+    ],
+    highlights: [
+      "Full CRUD via clean REST endpoints",
+      "MVC separation of concerns",
+      "JSON-first API consumable by any client",
+      "Built with Spring Boot best practices",
+    ],
+    year: "2024",
+  },
+  {
+    id: 3,
+    title: "Library Management System",
+    tagline: "Book inventory, issuance and return tracking",
+    description:
+      "Backend driven application to manage book inventory, issue tracking and return workflows with database integration.",
+    longDescription:
+      "A backend application for managing a library's book catalogue and member borrowing workflows. Supports adding and removing books from inventory, issuing books to registered members, tracking due dates, and processing returns. SQL database integration ensures persistent record-keeping for all transactions.",
+    technologies: ["Spring Boot", "SQL", "MVC", "Java", "JDBC"],
+    category: "Backend",
+    status: "Completed",
+    live: false,
+    liveUrl: null,
+    githubUrl: "https://github.com/prejinpr",
+    preview: null,
+    screenshots: [],
+    architecture: [
+      { layer: "API Layer", detail: "REST endpoints for books, members, issue/return operations" },
+      { layer: "Business Logic", detail: "Availability checks, due-date calculation, fine computation" },
+      { layer: "Persistence", detail: "SQL database — Books, Members, Transactions tables" },
+    ],
+    highlights: [
+      "Complete book lifecycle: add, issue, return, remove",
+      "Member management with borrowing history",
+      "Due-date tracking and overdue detection",
+      "SQL-backed persistent storage",
+    ],
+    year: "2023",
+  },
+];
