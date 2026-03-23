@@ -173,11 +173,10 @@ export default function Navbar() {
               style={{
                 position: "fixed",
                 left: "50%",
-                top: "18px",
-                width: "calc(100% - 92px)",
+                top: "max(12px, env(safe-area-inset-top))",
+                bottom: "max(12px, env(safe-area-inset-bottom))",
+                width: "calc(100% - 40px)",
                 maxWidth: "620px",
-                height: "calc(100vh - 36px)",
-                maxHeight: "960px",
                 zIndex: 215,
                 borderRadius: "18px",
                 border: "1px solid rgba(255,255,255,0.14)",
@@ -185,12 +184,12 @@ export default function Navbar() {
                 backdropFilter: "blur(20px)",
                 WebkitBackdropFilter: "blur(20px)",
                 boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
-                display: "flex",
-                flexDirection: "column",
+                display: "grid",
+                gridTemplateRows: "64px 1fr auto",
                 overflow: "hidden",
               }}
             >
-              <div style={{ position: "absolute", top: "14px", left: "14px", right: "14px", display: "grid", gridTemplateColumns: "56px 1fr 56px", alignItems: "center", zIndex: 2 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "56px 1fr 56px", alignItems: "center", padding: "10px 14px 4px" }}>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -245,9 +244,9 @@ export default function Navbar() {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  gap: "10px",
-                  padding: "86px 20px 100px",
-                  flex: 1,
+                  gap: "clamp(6px, 1.4vh, 12px)",
+                  padding: "10px 20px",
+                  minHeight: 0,
                 }}
               >
                 {navLinks.map((l, i) => (
@@ -261,7 +260,7 @@ export default function Navbar() {
                     style={{
                       textDecoration: "none",
                       color: "rgba(255,255,255,0.92)",
-                      fontSize: "clamp(22px, 4.2vw, 38px)",
+                      fontSize: "clamp(18px, 3.3vh, 33px)",
                       fontWeight: 300,
                       lineHeight: 1,
                       letterSpacing: "0.05em",
@@ -287,16 +286,12 @@ export default function Navbar() {
 
               <div
                 style={{
-                  position: "absolute",
-                  left: "0",
-                  right: "0",
-                  bottom: "14px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  gap: "18px",
+                  gap: "14px",
                   flexWrap: "wrap",
-                  padding: "0 16px",
+                  padding: "8px 16px 12px",
                 }}
               >
                 {utilityLinks.map((l) => (
@@ -307,9 +302,9 @@ export default function Navbar() {
                     style={{
                       textDecoration: "none",
                       color: "rgba(255,255,255,0.7)",
-                      fontSize: "10px",
+                      fontSize: "9.5px",
                       fontWeight: 300,
-                      letterSpacing: "0.14em",
+                      letterSpacing: "0.12em",
                       textTransform: "uppercase",
                     }}
                   >

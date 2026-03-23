@@ -107,7 +107,7 @@ export default function DotGridBackground() {
         zIndex: 0,
         pointerEvents: "none",
         background:
-          "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px), radial-gradient(ellipse at 50% 8%, rgba(11, 28, 68, 0.32), transparent 58%), linear-gradient(180deg, #020718 0%, #02040f 50%, #03030a 100%)",
+          "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px), radial-gradient(ellipse at 50% 8%, rgba(11, 28, 68, 0.32), transparent 58%), linear-gradient(180deg, #020718 0%, #02040f 50%, #03030a 100%)",
         backgroundSize: "36px 36px, 36px 36px, auto, auto",
       }}
     />
